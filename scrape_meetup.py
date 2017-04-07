@@ -62,7 +62,7 @@ output['ethercalc'] = io.StringIO() # send to ethercalc
 # Set output type here (hardcoded :/ )
 writer = csv.writer(output[OUTPUT_TYPE])
 
-writer.writerow(['name', 'meetup_member_id', 'meetup_attendance_count', 'twitter_handle', 'facebook_url'])
+writer.writerow(['name', 'meetup_member_id', 'meetup_attendance_count', 'twitter_url', 'facebook_url'])
 for m in members:
     services = m['other_services']
     process_twitter = lambda handle: 'https://twitter.com/{}'.format(handle.replace('@', ''))
