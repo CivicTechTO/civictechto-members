@@ -9,6 +9,7 @@ import sys
 # See: https://groups.google.com/forum/#!topic/meetup-api/S2hTGDLDv4Y
 
 ETHERCALC_SHEET_ID = os.environ.get('ETHERCALC_SHEET_ID', 'civictechto-members')
+OUTPUT_TYPE = os.environ.get('CTTO_OUTPUT_TYPE', 'file')
 MEETUP_API_KEY = os.environ['MEETUP_API_KEY']
 
 client = meetup.api.Client(MEETUP_API_KEY)
@@ -59,13 +60,12 @@ output['screen'] = sys.stdout # send to screen
 output['ethercalc'] = io.StringIO() # send to ethercalc
 
 # Set output type here (hardcoded :/ )
-otype = 'ethercalc'
-writer = csv.writer(output[otype])
+writer = csv.writer(output[OUTPUT_TYPE])
 
 writer.writerow(['name', 'meetup_member_id', 'meetup_attendance_count'])
 for m in members:
     writer.writerow([m['name'], m['id'], m['attendance_count']])
 
-if otype == 'ethercalc':
-    content = output[otype].getvalue()
+if OUTPUT_TYPE == 'ethercalc':
+    content = output[OUTPUT_TYPE].getvalue()
     requests.put('https://ethercalc.org/_/{}'.format(ETHERCALC_SHEET_ID), content.encode('utf-8'))
