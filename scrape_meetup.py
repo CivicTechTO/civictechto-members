@@ -45,12 +45,13 @@ for i, eid in enumerate(event_ids):
 
 for i, m in enumerate(members):
     for r in rsvps:
-        if r['member']['member_id'] == m['id']:
+        if r['member']['member_id'] == m['id'] and r['response'] == 'yes':
             m['attendance_count'] += 1
     n = i + 1
     if n % 100 == 0:
         print('Processed RSVPs for member {}/{}'.format(n, len(members)))
 
+output = {}
 output['file'] = open('members.csv', 'w') # send to file
 output['screen'] = sys.stdout # send to screen
 output['ethercalc'] = io.StringIO() # send to ethercalc
@@ -64,5 +65,5 @@ for m in members:
     writer.writerow([m['name'], m['id'], m['attendance_count']])
 
 if otype == 'ethercalc':
-    content = output.getvalue()
+    content = output[otype].getvalue()
     requests.put('https://ethercalc.org/_/civictechto-members', content.encode('utf-8'))
