@@ -1,11 +1,13 @@
 # CivicTech Toronto Members
 
-This app aspires to be a simple way to display data on CivicTechTO
-members.
+This app aspires to be a simple way to store/edit data on CivicTechTO
+members, for the purposes of displaying on a splash page.
 
-It will be backed by an ethercalc pad, with data periodically scraped
-from services. There will be no access control, so anyone will be able
-to connect accounts.
+It is backed by [an ethercalc sheet][sheet], with data scraped from services
+daily at 1:30am ET. There will be no access control, so anyone will be
+able to connect accounts.
+
+   [sheet]: https://ethercalc.org/civictechto-members
 
 ## Usage
 
