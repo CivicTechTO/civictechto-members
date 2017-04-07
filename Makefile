@@ -2,4 +2,4 @@ pip-install:
 	pip install -r requirements.txt
 
 scrape:
-	python app.py
+	python scrape_meetup.py
