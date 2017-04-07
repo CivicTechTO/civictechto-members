@@ -3,9 +3,9 @@
 This app aspires to be a simple way to store/edit data on CivicTechTO
 members, for the purposes of displaying on a splash page.
 
-It is backed by [an ethercalc sheet][sheet], with data scraped from services
-daily at 1:30am ET. There will be no access control, so anyone will be
-able to connect accounts.
+It is backed by [an ethercalc sheet][sheet], with public data scraped
+from services daily at 1:30am ET. There is no access control, so anyone
+will be able to edit the data store.
 
    [sheet]: https://ethercalc.org/civictechto-members
 
