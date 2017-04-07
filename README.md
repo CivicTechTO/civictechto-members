@@ -13,6 +13,14 @@ to connect accounts.
 mkvirtualenv civictechto-members --python=`which python3`
 workon civictechto-members
 make pip-install
-export MEETUP_API_KEY=<my-key>
+
+# If you have heroku-cli installed:
+make setup
+# Edit .env to add MEETUP_API_KEY
+# Export envvars in .env file
+export $(cat .env | xargs)
 make scrape
+
+# You may alternatively use heroku-cli to run with envvars loaded
+heroku local:run make scrape
 ```

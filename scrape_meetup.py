@@ -8,7 +8,9 @@ import sys
 # Meetup attendance counts are no longer available via API
 # See: https://groups.google.com/forum/#!topic/meetup-api/S2hTGDLDv4Y
 
+ETHERCALC_SHEET_ID = os.environ.get('ETHERCALC_SHEET_ID', 'civictechto-members')
 MEETUP_API_KEY = os.environ['MEETUP_API_KEY']
+
 client = meetup.api.Client(MEETUP_API_KEY)
 
 members = []
@@ -66,4 +68,4 @@ for m in members:
 
 if otype == 'ethercalc':
     content = output[otype].getvalue()
-    requests.put('https://ethercalc.org/_/civictechto-members', content.encode('utf-8'))
+    requests.put('https://ethercalc.org/_/{}'.format(ETHERCALC_SHEET_ID), content.encode('utf-8'))
