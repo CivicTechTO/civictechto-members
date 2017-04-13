@@ -9,6 +9,16 @@ will be able to edit the data store.
 
    [sheet]: https://ethercalc.org/civictechto-members
 
+## Feature Roadmap
+
+- [x] Add meetup attendance counts
+- [ ] Resurface data as pretty one-pager
+- [ ] Add longest meetup streak counts
+- [ ] Add slack message counts
+- [ ] Consider tallying some GitHub metric
+- [ ] Consider "last seen" for meetup or Slack
+- [ ] Make account id columns non-overwriting
+
 ## Usage
 
 ```
