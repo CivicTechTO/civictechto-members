@@ -12,7 +12,8 @@ will be able to edit the data store.
 ## Feature Roadmap
 
 - [x] Add meetup attendance counts
-- [ ] Resurface data as pretty one-pager
+- [ ] Resurface data as pretty one-pager [(Ethercalc API
+  docs)](https://github.com/audreyt/ethercalc/blob/master/API.md)
 - [ ] Add longest meetup streak counts
 - [ ] Add slack message counts
 - [ ] Consider tallying some GitHub metric
