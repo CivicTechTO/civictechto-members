@@ -42,3 +42,9 @@ make scrape
 # You may alternatively use heroku-cli to run with envvars loaded
 heroku local:run make scrape
 ```
+
+## Inspirations
+
+- [Coala: Get Involved page](https://coala.io/#/getinvolved)
+  - [Source code: UI](https://github.com/coala/landing-frontend)
+  - [Source code: API](https://gitlab.com/coala/landing)
