@@ -8,6 +8,11 @@ from services daily at 1:30am ET. There is no access control, so anyone
 will be able to edit the data store.
 
    [sheet]: https://ethercalc.org/civictechto-members
+   
+The script is run daily on [Heroku][] via their [scheduler][], under the `civictechto-members` app.
+
+   [Heroku]: https://www.heroku.com/about
+   [scheduler]: https://devcenter.heroku.com/articles/scheduler
 
 ## Feature Roadmap
 
